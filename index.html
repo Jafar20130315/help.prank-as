@@ -9,13 +9,20 @@
 
   <script src="https://cdn.tailwindcss.com"></script>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
-<link rel="icon" href="/favicon.png" sizes="any">
+  <link rel="icon" href="/favicon.png" sizes="any">
+
   <style>
     body { font-family: 'Montserrat', sans-serif; }
   </style>
 </head>
 
 <body class="bg-gray-100 text-gray-900">
+
+  <!-- Image Zoom Modal -->
+  <div id="imgModal" class="fixed inset-0 bg-black bg-opacity-70 hidden justify-center items-center z-50">
+    <span id="closeModal" class="absolute top-5 right-6 text-white text-4xl cursor-pointer">&times;</span>
+    <img id="modalImg" class="max-w-[90%] max-h-[90%] rounded-lg shadow-2xl">
+  </div>
 
   <!-- Navbar -->
   <header class="bg-white shadow-md">
@@ -45,18 +52,13 @@
 
         <div class="bg-white p-6 rounded-xl shadow">
           <h3 class="text-xl font-semibold mb-2">1. Prankni qanday ochish mumkin?</h3>
-          <p>
-            Prank-as ga kirgandan so'ng, u yerda barcha Prank buyumlari chiqadi.
-          </p>
+          <p>Prank-as ga kirgandan so'ng, u yerda barcha Prank buyumlari chiqadi.</p>
         </div>
 
         <div class="bg-white p-6 rounded-xl shadow">
           <h3 class="text-xl font-semibold mb-2">2. Prankning yashirin qismini qanday ochish mumkin?</h3>
-          <p>
-           Prank'ning yashirin qismi asosan prank'ni sozlash uchun kerak bo'ladi, yashirin qismlarni " . " yoki " / " tugmalari orqali ochsa bo'ladi.
-          </p>
+          <p>Prank'ning yashirin qismi prank'ni sozlash uchun kerak bo'ladi. Ularni “.” yoki “/” tugmalari bilan ochish mumkin.</p>
         </div>
-
 
       </div>
     </section>
@@ -70,35 +72,33 @@
       <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
 
         <div class="bg-white p-3 rounded-xl shadow">
-          <img src="/screenshot1.PNG" class="rounded-lg">
+          <img src="/screenshot1.PNG" class="rounded-lg cursor-pointer zoom-img">
         </div>
 
         <div class="bg-white p-3 rounded-xl shadow">
-          <img src="/screenshot2.PNG">
+          <img src="/screenshot2.PNG" class="rounded-lg cursor-pointer zoom-img">
         </div>
 
         <div class="bg-white p-3 rounded-xl shadow">
-          <img src="/screenshot3.PNG">
+          <img src="/screenshot3.PNG" class="rounded-lg cursor-pointer zoom-img">
         </div>
-
-      
 
       </div>
     </section>
 
-    <!-- Contact section with real email sender -->
+    <!-- Contact -->
     <section id="contact" class="mb-16">
       <h2 class="text-3xl font-bold mb-4">Aloqa</h2>
       <p class="mb-4 text-gray-700">
-        Savollar, takliflar yoki xatoliklar bo‘lsa, quyidagi forma orqali to‘g‘ridan-to‘g‘ri 
-        <b>admin@prank-as.site</b> pochta manziliga yozishing mumkin.
+        Savollar yoki xatoliklar bo‘lsa, quyidagi forma orqali to‘g‘ridan-to‘g‘ri 
+        <b>admin@prank-as.site</b> ga yozishing mumkin.
       </p>
 
       <form action="https://api.web3forms.com/submit" method="POST" class="grid gap-4 max-w-xl bg-white p-6 rounded-xl shadow">
 
         <input type="hidden" name="access_key" value="df989467-d33e-4c96-b5b9-d22606a7fdf7">
 
-        <input type="text" name="name" placeholder="Ismingiz (yoki @)" class="border p-3 rounded-lg w-full" required>
+        <input type="text" name="name" placeholder="Ismingiz yoki @" class="border p-3 rounded-lg w-full" required>
 
         <input type="email" name="email" placeholder="Email manzilingiz" class="border p-3 rounded-lg w-full" required>
 
@@ -116,6 +116,33 @@
   <footer class="text-center py-6 bg-white shadow-inner">
     <p class="text-gray-700">© 2025 Prank-as. Barcha huquqlar himoyalangan.</p>
   </footer>
+
+  <!-- JS: Zoom Function -->
+  <script>
+    const modal = document.getElementById("imgModal");
+    const modalImg = document.getElementById("modalImg");
+    const closeBtn = document.getElementById("closeModal");
+
+    document.querySelectorAll(".zoom-img").forEach(img => {
+      img.addEventListener("click", () => {
+        modalImg.src = img.src;
+        modal.classList.remove("hidden");
+        modal.classList.add("flex");
+      });
+    });
+
+    closeBtn.onclick = () => {
+      modal.classList.add("hidden");
+      modal.classList.remove("flex");
+    };
+
+    modal.onclick = (e) => {
+      if (e.target === modal) {
+        modal.classList.add("hidden");
+        modal.classList.remove("flex");
+      }
+    };
+  </script>
 
 </body>
 </html>
