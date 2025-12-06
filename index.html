@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Prank-as HELP </title>
+  <meta name="description" content="Prank-as ilovasidan foydalanish bo‘yicha to‘liq qo‘llanma. Pranklarni qanday ishlatish, qanday ochish va sozlash haqida.">
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+<link rel="icon" href="/favicon.png" sizes="any">
+  <style>
+    body { font-family: 'Montserrat', sans-serif; }
+  </style>
+</head>
+
+<body class="bg-gray-100 text-gray-900">
+
+  <!-- Navbar -->
+  <header class="bg-white shadow-md">
+    <div class="max-w-5xl mx-auto py-4 px-4 flex justify-between items-center">
+      <h1 class="text-2xl font-bold">Prank-as HELP</h1>
+      <nav class="space-x-6 text-lg">
+        <a href="#guide" class="hover:text-blue-600">Qo‘llanma</a>
+        <a href="#screens" class="hover:text-blue-600">Skrinshotlar</a>
+        <a href="#contact" class="hover:text-blue-600">Aloqa</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section class="bg-blue-600 text-white py-16 text-center">
+    <h2 class="text-4xl font-bold mb-3">Prank-as’dan qanday foydalaniladi?</h2>
+    <p class="text-lg opacity-90">Quyida barcha prank funksiyalari haqida to‘liq tushuntirilgan.</p>
+  </section>
+
+  <main class="max-w-5xl mx-auto p-6">
+
+    <!-- Guide section -->
+    <section id="guide" class="mb-16">
+      <h2 class="text-3xl font-bold mb-4">Qo‘llanma</h2>
+
+      <div class="space-y-6 text-gray-700 leading-relaxed">
+
+        <div class="bg-white p-6 rounded-xl shadow">
+          <h3 class="text-xl font-semibold mb-2">1. Prankni qanday ochish mumkin?</h3>
+          <p>
+            Prank-as ga kirgandan so'ng, u yerda barcha Prank buyumlari chiqadi.
+          </p>
+        </div>
+
+        <div class="bg-white p-6 rounded-xl shadow">
+          <h3 class="text-xl font-semibold mb-2">2. Prankning yashirin qismini qanday ochish mumkin?</h3>
+          <p>
+           Prank'ning yashirin qismi asosan prank'ni sozlash uchun kerak bo'ladi, yashirin qismlarni "." yoki "/" tugmalari orqali ochsa bo'ladi.
+          </p>
+        </div>
+
+
+      </div>
+    </section>
+
+    <!-- Screenshots -->
+    <section id="screens" class="mb-16">
+      <h2 class="text-3xl font-bold mb-4">Skrinshotlar</h2>
+
+      <p class="text-gray-700 mb-4">Quyida pranklarning qanday ko‘rinishini ko‘rishing mumkin:</p>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+
+        <div class="bg-white p-3 rounded-xl shadow">
+          <img src="https://via.placeholder.com/600x350?text=Skrinshot+1" class="rounded-lg">
+        </div>
+
+        <div class="bg-white p-3 rounded-xl shadow">
+          <img src="https://via.placeholder.com/600x350?text=Skrinshot+2" class="rounded-lg">
+        </div>
+
+        <div class="bg-white p-3 rounded-xl shadow">
+          <img src="https://via.placeholder.com/600x350?text=Skrinshot+3" class="rounded-lg">
+        </div>
+
+        <div class="bg-white p-3 rounded-xl shadow">
+          <img src="https://via.placeholder.com/600x350?text=Skrinshot+4" class="rounded-lg">
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Contact section with real email sender -->
+    <section id="contact" class="mb-16">
+      <h2 class="text-3xl font-bold mb-4">Aloqa</h2>
+      <p class="mb-4 text-gray-700">
+        Savollar, takliflar yoki xatoliklar bo‘lsa, quyidagi forma orqali to‘g‘ridan-to‘g‘ri 
+        <b>admin@prank-as.site</b> pochta manziliga yozishing mumkin.
+      </p>
+
+      <form action="https://api.web3forms.com/submit" method="POST" class="grid gap-4 max-w-xl bg-white p-6 rounded-xl shadow">
+
+        <input type="hidden" name="access_key" value="df989467-d33e-4c96-b5b9-d22606a7fdf7">
+
+        <input type="text" name="name" placeholder="Ismingiz (yoki @)" class="border p-3 rounded-lg w-full" required>
+
+        <input type="email" name="email" placeholder="Email manzilingiz" class="border p-3 rounded-lg w-full" required>
+
+        <textarea name="message" rows="5" placeholder="Xabaringiz" class="border p-3 rounded-lg w-full" required></textarea>
+
+        <button type="submit" class="bg-blue-600 text-white py-3 rounded-lg hover:bg-blue-700 transition">
+          Xabarni yuborish
+        </button>
+      </form>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="text-center py-6 bg-white shadow-inner">
+    <p class="text-gray-700">© 2025 Prank-as. Barcha huquqlar himoyalangan.</p>
+  </footer>
+
+</body>
+</html>
